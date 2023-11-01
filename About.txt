@@ -1,0 +1,7 @@
+hello i have mention all the Postman API's for my Project [E-BUY| Ecommerce] in the Repo. it self.
+go them before using them.
+you need to setup config database. username, password, database(name you DB). And connect to mySQL .
+you must read router folder to define API for postman.
+You must create product follow params I have defined same.
+You need to pay attention "Category" in Project to create right product follow "Category".
+Finally, Any question let's tell me.
