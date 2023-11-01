@@ -1,0 +1,535 @@
+{
+	"info": {
+		"_postman_id": "88f18ed3-4ea3-41e8-89f8-764df4694b83",
+		"name": "E-BUY_Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29531471"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\": \"Ranveer Kr\",\r\n    \"email\":\"helllo12@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"phone\": \"0909090905\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"helllo12@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "get-list-user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbG5hbWUiOiJodW5nIG5ndXllbiIsImVtYWlsIjoiaHVuZ25ndXllbkBnbWFpbC5jb20iLCJwaG9uZSI6IjA5MDkwODA4MDkiLCJpYXQiOjE2NjY1ODM4NzksImV4cCI6MTY2Njg0MzA3OX0.vCooGjokLu7SHaByaCgqpsYvhlaVP2yyae4WCz5LS_0",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8000/api/v1/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "refresh-token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbG5hbWUiOiJodW5nIG5ndXllbiIsImVtYWlsIjoiaHVuZ25ndXllbkBnbWFpbC5jb20iLCJwaG9uZSI6IjA5MDkwODA4MDkiLCJpYXQiOjE2NjUzMDM4MzcsImV4cCI6MTY2NTU2MzAzN30.PYUV_PjaLa5iQScuQXgjP7XVTPCCyqH1Go-5HDOJa6o",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"refresh"
+							],
+							"query": [
+								{
+									"key": "Cookie",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbG5hbWUiOiJodW5nIG5ndXllbiIsImVtYWlsIjoiaHVuZ25ndXllbkBnbWFpbC5jb20iLCJwaG9uZSI6IjA5MDkwODA4MDkiLCJpYXQiOjE2NjUzMDEzMzksImV4cCI6MTY2NTU2MDUzOX0.pSdMvtmbyHBxYGHnGR3MxxBh8vEz77b0QCd7gcQxnOs",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbG5hbWUiOiJodW5nIG5ndXllbiIsImVtYWlsIjoiaHVuZ25ndXllbkBnbWFpbC5jb20iLCJwaG9uZSI6IjA5MDkwODA4MDkiLCJpYXQiOjE2NjUzMDQxOTEsImV4cCI6MTY2NTMwNDIyMX0.i14OtjhDS6pELLk-lXnii4O9Cd_n511VABkUdswpiXE",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8000/api/v1/users/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "update-user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\": \"Rehan\",\r\n        \"email\": \"minrehn@gmail.com\",\r\n        \"password\": \"123456\",\r\n        \"phone\": \"0909090901\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/users/2"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbG5hbWUiOiJodW5nIG5ndXllbiIsImVtYWlsIjoiaHVuZ25ndXllbkBnbWFpbC5jb20iLCJwaG9uZSI6IjA5MDkwODA4MDkiLCJpYXQiOjE2NjY1OTEwMjEsImV4cCI6MTY2Njg1MDIyMX0.oUuvfnU_Pv6FugR2aHBbJ6SKVP5d3wKWcMxZNBen294",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8000/api/v1/users/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "add-product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Apple AirPods Pro (2nd Generation) ​​​​\" ,\r\n      \"description\": \"Earpods by Apple\",\r\n      \"price\": \"550\",\r\n      \"img1\": \"https://m.media-amazon.com/images/I/51emillNpWL._SX679_.jpg\",\r\n      \"img2\": \"https://m.media-amazon.com/images/I/61sRKTAfrhL._SX679_.jpg\",\r\n      \"img3\": \"https://m.media-amazon.com/images/I/61SUj2aKoEL._SX679_.jpg\",\r\n      \"img4\": \"https://m.media-amazon.com/images/I/41YFoVFwKiL._SX679_.jpg\",\r\n      \"category\": \"accessory\",\r\n      \"originalPrice\": \"999\",\r\n      \"promotionPercent\": \"20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/products"
+					},
+					"response": []
+				},
+				{
+					"name": "get-list-product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/products"
+					},
+					"response": []
+				},
+				{
+					"name": "delete-product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/products/9"
+					},
+					"response": []
+				},
+				{
+					"name": "update-product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Apple AirPods Pro (2nd Generation) ​​​​\" ,\r\n      \"description\": \"apple earpods 2nd gen with wireless charge\",\r\n      \"price\": \"550\",\r\n      \"img1\": \"https://m.media-amazon.com/images/I/51emillNpWL._SX679_.jpg\",\r\n      \"img2\": \"https://m.media-amazon.com/images/I/61sRKTAfrhL._SX679_.jpg\",\r\n      \"img3\": \"https://m.media-amazon.com/images/I/61SUj2aKoEL._SX679_.jpg\",\r\n      \"img4\": \"https://m.media-amazon.com/images/I/41YFoVFwKiL._SX679_.jpg\",\r\n      \"category\": \"accessory\",\r\n      \"originalPrice\": \"900\",\r\n      \"promotionPercent\": \"15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/products/4"
+					},
+					"response": []
+				},
+				{
+					"name": "get-product-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/products/2"
+					},
+					"response": []
+				},
+				{
+					"name": "get-panigation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/products/?category=clothes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "9",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "clothes"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "add-to-cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbG5hbWUiOiJodW5nIG5ndXllbiIsImVtYWlsIjoiaHVuZ25ndXllbkBnbWFpbC5jb20iLCJwaG9uZSI6IjA5MDkwODA4MDkiLCJpYXQiOjE2NjYwMTYzNjYsImV4cCI6MTY2NjI3NTU2Nn0.TeAp1BHzxM3hgOV1gBn7WpnLQEYt4WqE8BxjfOt3vig",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/carts?productName=Adidas&productPrice=200&productImg=https://m.media-amazon.com/images/I/61QtZGN1LUL._AC_UL640_QL65_.jpg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"carts"
+							],
+							"query": [
+								{
+									"key": "idUser",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "idProduct",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "productName",
+									"value": "Adidas"
+								},
+								{
+									"key": "productPrice",
+									"value": "200"
+								},
+								{
+									"key": "productCount",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "productImg",
+									"value": "https://m.media-amazon.com/images/I/61QtZGN1LUL._AC_UL640_QL65_.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-mail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZnVsbG5hbWUiOiJodW5nIG5ndXllbiIsImVtYWlsIjoiaHVuZ25ndXllbkBnbWFpbC5jb20iLCJwaG9uZSI6IjA5MDkwODA4MDkiLCJpYXQiOjE2NjYwNzY0ODQsImV4cCI6MTY2NjMzNTY4NH0.OErOOo7DcQHB77dcVpUPGXU9KDN4Du28SYXbTOH-n3g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\": \"Ranveer\",\r\n    \"to\": \"ranveer.kumar4you@gmail.com\",\r\n    \"phone\": \"0909090909\",\r\n    \"address\": \"patna bihar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/emails"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "get-comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/comments/?idProduct=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								""
+							],
+							"query": [
+								{
+									"key": "idProduct",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImZ1bGxuYW1lIjoiaGFvIG5ndXllbiIsImVtYWlsIjoiaGFvbmd1eWVuMTJAZ21haWwuY29tIiwicGhvbmUiOiIwOTA5MDkwOTA1IiwiaWF0IjoxNjc4Njk0NzkwLCJleHAiOjE2Nzg5NTM5OTB9.ZPfsXjjnw_n3_E9b5aR7VX70hYiXNBE8wVAhZ4A4OtA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"idProduct\": 2,\r\n    \"idUser\": 3,\r\n    \"fullname\": \"adidas shoes\",\r\n    \"content\": \"Good idProduct\",\r\n    \"star1\": 1,\r\n    \"star2\": 2,\r\n    \"star3\": 3,\r\n    \"star4\": 4,\r\n    \"star5\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/comments"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "history",
+			"item": [
+				{
+					"name": "get-history-user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/history/"
+					},
+					"response": []
+				},
+				{
+					"name": "get-history-by-userid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/history?idUser=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"history"
+							],
+							"query": [
+								{
+									"key": "idUser",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "create-message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senderId\": \"1\",\r\n    \"receiverId\": \"1\",\r\n    \"content\":\"Hello Bro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/messengers?senderId=1&receiverId=1&content=hello",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"messengers"
+							],
+							"query": [
+								{
+									"key": "senderId",
+									"value": "1"
+								},
+								{
+									"key": "receiverId",
+									"value": "1"
+								},
+								{
+									"key": "content",
+									"value": "hello"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-message",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/messengers?senderId=13&receiverId=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"messengers"
+							],
+							"query": [
+								{
+									"key": "senderId",
+									"value": "13"
+								},
+								{
+									"key": "receiverId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
